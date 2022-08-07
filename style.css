@@ -11,19 +11,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 190vh;
-    background: linear-gradient(45deg, #874da2, #c43a30);
+    min-height: 100vh;
+    /* min-height: 190vh; */
+    background: linear-gradient(326deg, #874da2, #c43a30);
 }
 .card {
     position: relative;
-    width: 350px;
-    height: 190px;
+    min-width: 300px;
+    height: 165px;
     background: #282623;
     border-radius: 20px;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.30);
 }
 .card:hover {
-    height: 450px;
+    height: 500px;
 }
 .imgBx {
     position: absolute;
@@ -64,11 +65,11 @@ body {
 }
 
 .card .content .details {
-    padding: 40px;
+    padding: 10px 40px 10px 40px;
     text-align: center;
     width: 100%;
     transition: 0.5s;
-    transform: translateY(150px);
+    transform: translateY(208px);
 }
 .card:hover .content .details {
     transition: 0.5s;
@@ -88,23 +89,109 @@ body {
 .card .content .details .data {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 10px 0;
 }
 .card .content .details .data h3 {
     font-size: 1em;
     color: #fff;
     line-height: 1.2em;
     font-weight: 600;
+    margin-bottom: 8px;
 }
-.card .content .details .data h3 span {
-    font-size: 0.85em;
-    font-weight: 400;
-    opacity: 0.5;
+.card .content .details .data .icono-tecnologia {
+    display: flex;
+}
+.card .content .details .data .icono-tecnologia p{
+    margin: 5px;
+}
+.card .content .details .data .icono-tecnologia .html{
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./assets/html-5-48.png");
+}
+.card .content .details .data .icono-tecnologia .css {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./assets/css3-48.png");
+}
+.card .content .details .data .icono-tecnologia .javascript {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./assets/javascript-48.png");
+}
+.card .content .details .data .icono-tecnologia .github {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./assets/git-48.png");
+}
+.card .content .details .social-media {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.card .content .details .social-media p {
+    margin: 10px;
+}
+.card .content .details .social-media .icon-github {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./assets/logo-github.png");
+}
+.card .content .details .social-media .icon-email {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./assets/logo-gmail.png");
+}
+.card .content .details .social-media .icon-linkedin {
+    width: 34px;
+    height: 34px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./assets/logo-linkedin.png");
+}
+.card .content .details .social-media .icon-twitter{
+    width: 34px;
+    height: 34px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./assets/logo-twitter.png");
 }
 .card .content .details .actionBtn {
     display: flex;
-    justify-content: space-between;
+    margin-top: px;
+    justify-content: center;
     /* gap: 20px; */
+}
+.card .content .details .actionBtn .button-download span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("./assets/descargar.png");
+    vertical-align: text-bottom;
 }
 .card .content .details .actionBtn button {
     padding: 10px 30px;
@@ -113,11 +200,11 @@ body {
     outline: none;
     font-size: 1em;
     font-weight: 500;
-    background: #fff;
-    color: #282623;
+    background: rgb(80, 79, 79);
+    color: #fff;
     cursor: pointer;
 }
 .card .content .details .actionBtn button:hover {
-    background: rgb(80, 79, 79);
-    color: #fff;
+    text-decoration: underline;
+    background: linear-gradient(326deg, #874da2, #c43a30);
 }
