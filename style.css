@@ -8,6 +8,7 @@
 }
 
 body {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +19,15 @@ body {
 .card {
     position: relative;
     min-width: 300px;
-    height: 165px;
+    min-height: 160px;
     background: #282623;
     border-radius: 20px;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.30);
 }
 .card:hover {
-    height: 500px;
+    margin: 10px;
+    margin-top: 50px;
+    height: 700px;
 }
 .imgBx {
     position: absolute;
@@ -45,6 +48,8 @@ body {
     height: 250px;
     transition: 0.5s;
     border-radius: 20px;
+    background-image: url("https://i.pinimg.com/originals/83/14/9a/83149a3c0a2e68b4b2463c2d801e4704.gifs");
+    padding: 10px;
 } 
 .imgBx img {
     position: absolute;
@@ -65,11 +70,11 @@ body {
 }
 
 .card .content .details {
-    padding: 10px 40px 10px 40px;
+    padding: 10px 30px 10px 30px;
     text-align: center;
     width: 100%;
     transition: 0.5s;
-    transform: translateY(208px);
+    transform: translateY(408px);
 }
 .card:hover .content .details {
     transition: 0.5s;
@@ -82,9 +87,15 @@ body {
     line-height: 1.2em;
 }
 .card .content .details h2 span {
+    color: #c43a30;
     font-size: 0.75em;
-    font-weight: 500;
-    opacity: 0.5;
+    font-weight: 600;
+}
+.card .content .details .bio p {
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: #ffff;
+    font-weight: 400;
 }
 .card .content .details .data {
     display: flex;
@@ -99,6 +110,48 @@ body {
     line-height: 1.2em;
     font-weight: 600;
     margin-bottom: 8px;
+}
+.card .content .details .actionBtn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* gap: 20px; */
+}
+.card .content .details .actionBtn .button-download span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("./assets/descargar.png");
+    vertical-align: text-bottom;
+}
+.card .content .details .actionBtn .button-projects span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./assets/logo-github.png");
+    vertical-align: text-bottom;
+}
+.card .content .details .actionBtn button {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: rgb(80, 79, 79);
+    color: #fff;
+    cursor: pointer;
+}
+.card .content .details .actionBtn button:hover {
+    text-decoration: underline;
+    background: linear-gradient(326deg, #874da2, #c43a30);
 }
 .card .content .details .data .icono-tecnologia {
     display: flex;
@@ -179,32 +232,4 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("./assets/logo-twitter.png");
-}
-.card .content .details .actionBtn {
-    display: flex;
-    margin-top: px;
-    justify-content: center;
-    /* gap: 20px; */
-}
-.card .content .details .actionBtn .button-download span {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url("./assets/descargar.png");
-    vertical-align: text-bottom;
-}
-.card .content .details .actionBtn button {
-    padding: 10px 30px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    font-weight: 500;
-    background: rgb(80, 79, 79);
-    color: #fff;
-    cursor: pointer;
-}
-.card .content .details .actionBtn button:hover {
-    text-decoration: underline;
-    background: linear-gradient(326deg, #874da2, #c43a30);
 }
