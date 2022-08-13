@@ -1,235 +1,339 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
-* {
+
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-body {
-    margin-top: 10px;
+section 
+{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* min-height: 190vh; */
     background: linear-gradient(326deg, #874da2, #c43a30);
+    padding: 50px;
 }
-.card {
+.container 
+{
     position: relative;
-    min-width: 300px;
-    min-height: 160px;
-    background: #282623;
+    width: calc(100% - 300px);
+    min-height: calc(100vh - 280px);
+    min-height: 300px;
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 15px 35px rgba(255,255,255,0.05);
     border-radius: 20px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.30);
-}
-.card:hover {
-    margin: 10px;
-    margin-top: 50px;
-    height: 700px;
-}
-.imgBx {
-    position: absolute;
-    left: 50%;
-    top: -50px;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
-    overflow: hidden;
-    transition: 0.5s;
-    z-index: 1;
-}
-.card:hover .imgBx {
-    width: 250px;
-    height: 250px;
-    transition: 0.5s;
-    border-radius: 20px;
-    background-image: url("https://i.pinimg.com/originals/83/14/9a/83149a3c0a2e68b4b2463c2d801e4704.gifs");
-    padding: 10px;
-} 
-.imgBx img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.card .content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    overflow: hidden;
-}
-
-.card .content .details {
-    padding: 10px 30px 10px 30px;
-    text-align: center;
-    width: 100%;
-    transition: 0.5s;
-    transform: translateY(408px);
-}
-.card:hover .content .details {
-    transition: 0.5s;
-    transform: translateY(0px);
-}
-.card .content .details h2 {
-    font-size: 1.25em;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.2em;
-}
-.card .content .details h2 span {
-    color: #c43a30;
-    font-size: 0.75em;
-    font-weight: 600;
-}
-.card .content .details .bio p {
-    font-size: 0.8em;
-    margin-top: 10px;
-    color: #ffff;
-    font-weight: 400;
-}
-.card .content .details .data {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
     align-items: center;
-    margin: 10px 0 10px 0;
+    padding: 50px;
 }
-.card .content .details .data h3 {
-    font-size: 1em;
-    color: #fff;
-    line-height: 1.2em;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-.card .content .details .actionBtn {
+header 
+{
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    left: 20px;
+    padding: 20px 50px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    /* gap: 20px; */
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /*sobreposición*/
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
 }
-.card .content .details .actionBtn .button-download span {
+header .logo span 
+{
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url("./assets/descargar.png");
-    vertical-align: text-bottom;
-}
-.card .content .details .actionBtn .button-projects span {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    min-width: 50px;
+    min-height: 50px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("./assets/logo-github.png");
-    vertical-align: text-bottom;
+    background-image: url("https://media.giphy.com/media/Yxw2FmUCanQ1BwO4Re/giphy.gif");
+    vertical-align: text-top;
+    margin-right: 10px;
 }
-.card .content .details .actionBtn button {
-    width: 250px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    font-weight: 500;
-    background: rgb(80, 79, 79);
-    color: #fff;
-    cursor: pointer;
+header .logo 
+{
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
 }
-.card .content .details .actionBtn button:hover {
-    text-decoration: underline;
-    background: linear-gradient(326deg, #874da2, #c43a30);
-}
-.card .content .details .data .icono-tecnologia {
+header ul 
+{
     display: flex;
 }
-.card .content .details .data .icono-tecnologia p{
-    margin: 5px;
+header ul li 
+{
+    list-style: none;
+    margin: 0 10px;
 }
-.card .content .details .data .icono-tecnologia .html{
+header ul li a 
+{
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 25px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.content
+{
+    transform: translateX(-100px);
+    max-width: 700px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /*sobreposición*/
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    padding: 40px;
+    padding-left: 110px;
+    margin-top: 19px;
+}
+.content h2 
+{
+    font-size: 3em;
+    color: black;
+}
+.content p
+{
+    font-size: 1.2em;
+    color: black;
+}
+.content .icono-tecnologia 
+{
+    display: flex;
+}
+.content .icono-tecnologia p
+{
+    margin: 5px;
     width: 30px;
     height: 30px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.content .icono-tecnologia .html
+{
     background-image: url("./assets/html-5-48.png");
 }
-.card .content .details .data .icono-tecnologia .css {
-    width: 30px;
-    height: 30px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.content .icono-tecnologia .css
+{
     background-image: url("./assets/css3-48.png");
 }
-.card .content .details .data .icono-tecnologia .javascript {
-    width: 30px;
-    height: 30px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.content .icono-tecnologia .javascript
+{
     background-image: url("./assets/javascript-48.png");
 }
-.card .content .details .data .icono-tecnologia .github {
-    width: 30px;
-    height: 30px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.content .icono-tecnologia .github{
     background-image: url("./assets/git-48.png");
 }
-.card .content .details .social-media {
-    display: flex;
+.content .icono-tecnologia .sql-server{
+    background-image: url("./assets/sql-server-48.png");
+}
+.content .icono-tecnologia .photoshop{
+    background-image: url("./assets/photoshop-48.png");
+}
+.content .icono-tecnologia .aseprite{
+    background-image: url("./assets/aseprite-64.png");
+}
+.content a
+{
+    display: inline-block;
+    padding: 15px 30px;
+    background: #fff;
+    color: black;
     margin-top: 20px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.content a:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background: black;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.imgBx img
+{
+    min-width: 400px;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+    0%, 100%
+    {
+        transform: translateY(50px);
+    }
+    50%
+    {
+        transform: translateY(100px);
+    }
+}
+.sci
+{
+    position: absolute;
+    right: -25px;
+    display: flex;
     justify-content: center;
-    text-align: center;
     align-items: center;
+    flex-direction: column;
 }
-.card .content .details .social-media p {
-    margin: 10px;
+.sci li {
+    list-style: none;
 }
-.card .content .details .social-media .icon-github {
-    width: 30px;
-    height: 30px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("./assets/logo-github.png");
+.sci li a {
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 5px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
-.card .content .details .social-media .icon-email {
-    width: 30px;
-    height: 30px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("./assets/logo-gmail.png");
+.sci li a img {
+    transform:scale(0.6);
+    transition: 0.5s;
 }
-.card .content .details .social-media .icon-linkedin {
-    width: 34px;
-    height: 34px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("./assets/logo-linkedin.png");
+.sci li:hover a img
+{
+    transform: scale(0.6) rotate(360deg);
 }
-.card .content .details .social-media .icon-twitter{
-    width: 34px;
-    height: 34px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("./assets/logo-twitter.png");
+.copyrightText
+{
+    position: absolute;
+    bottom: 5px;
+    left: 50px;
+    color: black;
+}
+
+@media (max-width: 1200px)
+{
+    .container 
+    {
+        position: relative;
+        width: calc(100% - 20px);
+    }
+}
+@media (max-width: 992px)
+{
+    section 
+    {
+        padding: 50px 10px 10px;
+    }
+    .container
+    {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .container .content {
+        transform: translateX(0px);
+        max-width: 100%;
+        padding: 30px;
+        margin-top: 40px;
+        margin-top: -40px;
+    }
+    header 
+    {
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        top: -60px;
+        padding: 20px;
+        right: 0;
+        left: 0;
+    }
+    header ul 
+    {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header ul li
+    {
+        margin: 2px;
+    }
+    header ul li a
+    {
+        display: inline-block;
+    }
+    .imgBx
+    {
+        margin-bottom: 50px;
+    }
+    .content a {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    @keyframes animate
+    {
+        0%, 100%
+        {
+            transform: translateY(-20px);
+        }
+        50%
+        {
+            transform: translateY(20px);
+        }
+    }
+    .sci
+    {
+        position: relative;
+        flex-direction: row;
+        left: 0;
+    }
+    .sci li a 
+    {
+        margin: 0 10px;
+
+    }
+    .copyrightText
+    {
+        position: relative;
+        bottom: initial;
+        left: inherit;
+        width: 100%;
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+}
+}
+@media (max-width : 600px)
+{
+    .content h2 
+    {
+        font-size: 1.5rem;
+        color: black;
+    }
+    .content p 
+    {
+        font-size: 1em;
+        color: black;
+    }
+    .imgBx img
+    {
+        max-width: 300;
+    }
 }
